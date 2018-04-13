@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wall Chip pressed!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), WallChipActivity.class));
             }
         });
     }

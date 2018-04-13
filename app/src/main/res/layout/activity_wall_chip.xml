@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context=".PowerStripActivity">
+    tools:context=".WallChipActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tb_power_strip"
+        android:id="@+id/tb_wall_chip"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/pic"
+        android:background="@drawable/pic2"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <ImageView
-            android:id="@+id/iv_back_power_strip"
+            android:id="@+id/iv_back_wall_chip"
             android:layout_width="36dp"
             android:layout_height="48dp"
             android:layout_marginBottom="135dp"
@@ -34,14 +34,14 @@
             android:layout_width="wrap_content"
             android:layout_height="29dp"
             android:layout_marginTop="150dp"
-            android:text="@string/label_power_strip" />
+            android:text="@string/label_wall_chip" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/tb_power_strip">
+        app:layout_constraintTop_toBottomOf="@id/tb_wall_chip">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_consumption_power_strip"
+                android:id="@+id/tv_consumption_wall_chip"
                 style="@style/text_main"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
@@ -86,7 +86,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="36dp"
                 android:text="@string/watts"
-                app:layout_constraintLeft_toRightOf="@id/tv_consumption_power_strip"
+                app:layout_constraintLeft_toRightOf="@id/tv_consumption_wall_chip"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <View
@@ -104,13 +104,12 @@
             android:layout_height="76dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:alpha="0.54"
                 android:contentDescription="@string/description_icon"
-                android:src="@drawable/device"
+                android:src="@drawable/lights"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,23 +119,23 @@
                 android:layout_height="15dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="16dp"
-                android:text="Device #1"
+                android:text="Digital Lights"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_device1_power_strip"
+                android:id="@+id/tv_device1_wall_chip"
                 style="@style/text_main"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="36dp"
-                android:text="TV"
+                android:text="Fluorescent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.SwitchCompat
-                android:id="@+id/s_device1_power_strip"
+                android:id="@+id/s_device1_wall_chip"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_marginEnd="16dp"
@@ -163,9 +162,8 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:alpha="0.54"
                 android:contentDescription="@string/description_icon"
-                android:src="@drawable/device"
+                android:src="@drawable/lights_analog"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,84 +173,30 @@
                 android:layout_height="15dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="16dp"
-                android:text="Device #2"
+                android:text="Analog Lights"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_device2_power_strip"
+                android:id="@+id/tv_device2_wall_chip"
                 style="@style/text_main"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
                 android:layout_marginStart="72dp"
                 android:layout_marginTop="36dp"
-                android:text="PlayStation"
+                android:text="Chandelier"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/s_device2_power_strip"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="288dp"
-                android:layout_height="1dp"
-                android:alpha="0.12"
-                android:background="#000000"
+            <SeekBar
+                android:id="@+id/sb_wall_chip"
+                android:layout_width="264dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:alpha="0.54"
-                android:contentDescription="@string/description_icon"
-                android:src="@drawable/device"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                style="@style/text_label"
-                android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:layout_marginStart="72dp"
-                android:layout_marginTop="16dp"
-                android:text="Device #3"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_device3_power_strip"
-                style="@style/text_main"
-                android:layout_width="wrap_content"
-                android:layout_height="19dp"
-                android:layout_marginStart="72dp"
-                android:layout_marginTop="36dp"
-                android:text="Charger"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/s_device3_power_strip"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
         </android.support.constraint.ConstraintLayout>
 

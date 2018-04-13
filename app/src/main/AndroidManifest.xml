@@ -20,16 +20,23 @@
 
         <activity
             android:name=".PowerStripActivity"
-            android:theme="@style/AppTheme"
-            android:label="Power Strip"
+            android:label="@string/label_power_strip"
             android:parentActivityName=".MainActivity"
-           >
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
         </activity>
 
+        <activity
+            android:name=".WallChipActivity"
+            android:label="@string/label_wall_chip"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
