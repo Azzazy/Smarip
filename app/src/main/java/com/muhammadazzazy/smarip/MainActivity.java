@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.cv_power_strip).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Power Strip pressed!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), PowerStripActivity.class));
             }
         });
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.cv_wall_chip).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Wall Chip pressed!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), WallChipActivity.class));
             }
         });
